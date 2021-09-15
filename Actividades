@@ -1,0 +1,294 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "name": "IA_Actividad3_DanielVelazquez_1811439.ipynb",
+      "provenance": [],
+      "collapsed_sections": [],
+      "toc_visible": true,
+      "authorship_tag": "ABX9TyNMx7zkapLTWSjOdeAMrHnm",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/DanielVezz/Inteligencia-Artificial/blob/main/Actividades\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "JEj-NRIp9B9g"
+      },
+      "source": [
+        "# **Actividad 3. Ejercicio Introducción Python, 2da Parte**"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "lSYY1-_V9Nas"
+      },
+      "source": [
+        "Daniel E. Velázquez V."
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "HRYNBTPq9SaH"
+      },
+      "source": [
+        "1811439"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "ch4dr1TH9VeY"
+      },
+      "source": [
+        "Horario: Martes N4"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "lb0ahT0d9fC8"
+      },
+      "source": [
+        "# *Ejercicio 1*"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "vAcl9q5A9kwU"
+      },
+      "source": [
+        "1.1 Se pedirán las 7 comidas favoritas para almacenarlas y posteriormente imprimirlas"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "5O-jXyFT16Mo",
+        "outputId": "73b724ec-bf9a-4148-e267-035f917e41f6"
+      },
+      "source": [
+        "#1.1 - Pedir las 7 comidas\n",
+        "name = input(\"¿Cuál es tu nombre?\")\n",
+        "print(\"¿Cuáles son tus 7 comidas preferidas?\")\n",
+        "fav = [input(), input(), input(), input(), input(), input(), input(),]\n",
+        "\n",
+        "print(f\"\\nLa comidas preferidas de {name} son: {fav} \")"
+      ],
+      "execution_count": 44,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "¿Cuál es tu nombre?Daniel\n",
+            "¿Cuáles son tus 7 comidas preferidas?\n",
+            "pizza\n",
+            "hamburguesa\n",
+            "tacos\n",
+            "lasagna\n",
+            "pastel\n",
+            "galletas\n",
+            "sushi\n",
+            "\n",
+            "La comidas preferidas de Daniel son: ['pizza', 'hamburguesa', 'tacos', 'lasagna', 'pastel', 'galletas', 'sushi'] \n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "YRSt0RQL5MgK"
+      },
+      "source": [
+        "1.2 Se imprimiran cada una de las 7 comidas junto con la oración inicial \"Una de mis comidas favoritas es ...\""
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "8TBaT6b63SAy",
+        "outputId": "33bd9789-2a64-46b8-b68c-f231bac95124"
+      },
+      "source": [
+        "#1.2 - Agregar oración inicial\n",
+        "\n",
+        "for x in fav:\n",
+        "  print(f\"Una de las comidas favoritas de {name} es: \", x)"
+      ],
+      "execution_count": 50,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Una de las comidas favoritas de Daniel es:  pizza\n",
+            "Una de las comidas favoritas de Daniel es:  hamburguesa\n",
+            "Una de las comidas favoritas de Daniel es:  tacos\n",
+            "Una de las comidas favoritas de Daniel es:  lasagna\n",
+            "Una de las comidas favoritas de Daniel es:  pastel\n",
+            "Una de las comidas favoritas de Daniel es:  galletas\n",
+            "Una de las comidas favoritas de Daniel es:  sushi\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "GFu2PPA254yw"
+      },
+      "source": [
+        "# *Ejercicio 2*"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "YgefyO4z6BR0"
+      },
+      "source": [
+        "Crear juego de piedra, papel y tijeras"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "nGkRQQxT533f",
+        "outputId": "8a06e419-576d-4316-d440-a06d7a2490eb"
+      },
+      "source": [
+        "#Pedir opción a dos jugadores\n",
+        "\n",
+        "game = [\"piedra\", \"papel\", \"tijeras\"]\n",
+        "\n",
+        "J1 = input(\"Jugador 1: Elige piedra, papel o tijeras:\" )\n",
+        "\n",
+        "J2 = input(\"\\nJugador 2: Elige piedra, papel o tijeras:\" )\n",
+        "\n",
+        "#Combinaciones\n",
+        "if J1 == J2 :\n",
+        "  print(f\"\\nResultado: Empate\")\n",
+        "\n",
+        "elif J1 == \"piedra\" and J2 == \"tijeras\" :\n",
+        "  print(f\"\\nResultado: Jugador 1 gana\")\n",
+        "\n",
+        "elif J1 == \"tijeras\" and J2 == \"papel\" :\n",
+        "  print(f\"\\nResultado: Jugador 1 gana\")\n",
+        "\n",
+        "elif J1 == \"papel\" and J2 == \"piedra\" :\n",
+        "  print(f\"\\nResultado: Jugador 1 gana\")\n",
+        "\n",
+        "else :\n",
+        "  print(f\"\\nResultado: Jugador 2 gana\")\n"
+      ],
+      "execution_count": 31,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Jugador 1: Elige piedra, papel o tijeras:papel\n",
+            "\n",
+            "Jugador 2: Elige piedra, papel o tijeras:papel\n",
+            "\n",
+            "Resultado: Empate\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "mp6YWMeUBlTr"
+      },
+      "source": [
+        "# *Ejercicio 3*"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "hK9el0MwBsgj"
+      },
+      "source": [
+        "Imprimir el patrón pedido"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "KZiyxrcTBxT7",
+        "outputId": "45a7dc64-c3b1-45c7-87c6-1a9e4ce286f1"
+      },
+      "source": [
+        "i = 6\n",
+        "patron = [1,2,3,4,5,6]\n",
+        "\n",
+        "while i >= 1 :\n",
+        "  print(patron[0:i])\n",
+        "  i -= 1\n",
+        "\n",
+        "i = 2\n",
+        "while i <= 6 :\n",
+        "  print(patron[0:i])\n",
+        "  i += 1"
+      ],
+      "execution_count": 57,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[1, 2, 3, 4, 5, 6]\n",
+            "[1, 2, 3, 4, 5]\n",
+            "[1, 2, 3, 4]\n",
+            "[1, 2, 3]\n",
+            "[1, 2]\n",
+            "[1]\n",
+            "[1, 2]\n",
+            "[1, 2, 3]\n",
+            "[1, 2, 3, 4]\n",
+            "[1, 2, 3, 4, 5]\n",
+            "[1, 2, 3, 4, 5, 6]\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
